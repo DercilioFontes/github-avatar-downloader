@@ -41,5 +41,6 @@ getRepoContributors("jquery", "jquery", function(err, result) {
   // }
   for (var contributor in result) {
     console.log("avatar_url:", result[contributor].avatar_url);
+    downloadImageByURL(result[contributor].avatar_url, "avatars/" + result[contributor].login + ".png");
   }
 });
